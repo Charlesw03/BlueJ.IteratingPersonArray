@@ -1,4 +1,4 @@
-package com.zipcodewilmington;
+ 
 
 /**
  * Created by leon on 1/24/18.
@@ -13,8 +13,16 @@ public class PersonHandler {
     public String whileLoop() {
         String result = "";
         // assume there is a `counter`
+          int count = 0;
+          Person currentP;
         // while `counter` is less than length of array
-            // begin loop
+         while ( count < personArray.length ) {
+            currentP = personArray[count];
+            String stringRepresentation = currentP.toString();
+            result += stringRepresentation;
+            count++;
+            }  
+        // begin loop
 
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
@@ -31,7 +39,14 @@ public class PersonHandler {
         // identify initial value
         // identify terminal condition
         // identify increment
-
+            int count = 0;
+            Person currentP;
+        for(int i = 0; i < personArray.length; i++ ){
+               currentP=personArray[count];
+               String stringRepresentation = currentP.toString();
+               result +=stringRepresentation;
+               count++;
+            }
         // use the above clauses to declare for-loop signature
             // begin loop
                 // use `counter` to identify the `current Person` in the array
@@ -45,17 +60,30 @@ public class PersonHandler {
 
 
     public String forEachLoop() {
-        String result = "";
+        
         // identify array's type
-        // identify array's variable-name
-
+        String newString= "";
+        
+        //identify array's variable-name
+        
+         for(Person  currentP : personArray ){
+              
+             
+             currentP.toString(); 
+             newString+= currentP;
+             
+             
+                
+              
+              
+            }
         // use the above discoveries to declare for-each-loop signature
             // begin loop
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return newString;
     }
 
 
